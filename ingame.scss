@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    --secondary-font-family: "Cascadia Code";
+}
+
+body {
+    background: black;
+    // background: url("./image\ 1.png");
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: var(--secondary-font-family);
+    position: relative;
+
+    color: #fff;
+}
+
+.obj-timer {
+    height: 70px;
+    width: 167px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+
+    font-size: 32px;
+}
+
+#drake-timer {
+    background: linear-gradient(to right, rgba(37, 99, 235, 1) 0%, rgba(0, 0, 0, 0) 100%);
+
+    img {
+        width: 42px;
+        margin: 0.50em;
+    }
+
+    justify-content: left;
+
+}
+
+#baron-timer {
+    background: linear-gradient(to left, rgba(37, 99, 235, 1) 0%, rgba(0, 0, 0, 0) 100%);
+
+    img {
+        width: 52px;
+        margin: 0.50em;
+    }
+
+    right: 0;
+    justify-content: right;
+}
+
+.game-hud {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    width: 1130px;
+    height: 68px;
+    background: linear-gradient(to right, #2400ffff 0%, #00000000 50%, #ff0024ff 100%);
+
+    img {
+        height: 50px;
+    }
+
+    #club-logo {
+        margin: 0 30px 0 30px;
+    }
+
+    left:398px;
+
+    .game-hud-data {
+        display: flex;
+        align-items: center;
+        height: 68px;
+
+        .game-hud-team-stats,
+        .game-hud-team-towers,
+        .game-hud-team-gold {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .game-hud-game-score,
+        .game-hud-team-killcount,
+        .game-hud-team-name {
+            display: flex;
+            align-items: center;
+            font-size: 48px;
+            justify-content: center;
+        }
+
+        .game-hud-team-name {
+            width: 125px;
+        }
+
+        .game-hud-team-stats {
+            margin: 0 30px 0 30px;
+            width: 230px;
+            position: relative;
+
+            .game-hud-team-gold,
+            .game-hud-team-towers {
+                position: absolute;
+            }
+
+            #game-hud-blue-gold,
+            #game-hud-red-towers {
+                left: 5px;
+            }
+
+            #game-hud-blue-towers,
+            #game-hud-red-gold {
+                right: 5px;
+            }
+        }
+
+        .game-hud-game-score {
+            margin: 0 20px 0 20px;
+        }
+    }
+
+    #game-hud-game-time {
+        display: block;
+        position: absolute;
+        top: 69px
+    }
+
+}
+
+.vr {
+    display: inline-block;
+    border-left: 1px solid silver;
+    height: 1.5em
+}
